@@ -1,0 +1,23 @@
+#include <iostream>
+
+void print_multiplications() {
+    int base{};
+    int set{};
+    std::cout << "What number would you like to see the multiples of? ";
+    std::cin >> base;
+    std::cout << "Size of the set? ";
+    std::cin >> set;
+    for (int outer_val{ 1 }; outer_val <= set; ++outer_val) {
+        std::cout << outer_val << " * " << base << " = " << base * outer_val << std::endl;
+    }
+}
+int main()
+{
+    char selection{};
+    do {
+        print_multiplications();
+        std::cout << "Run again[Y] or Quit[Q]?" << std::endl;
+        std::cin >> selection;
+    } while (selection != 'q' && selection != 'Q');
+    return 0;
+}
